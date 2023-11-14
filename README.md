@@ -7,7 +7,7 @@ L'utilisateur va pouvoir rejouer en cliquant sur le bouton "Rejouer"
 
 ## Démonstration
 
-Lien vers le projet :
+Lien vers le projet : https://aperbet56.github.io/memory_game/
 
 ## Développez avec
 
