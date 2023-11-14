@@ -1,0 +1,123 @@
+/**** Reset ****/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**** Style général de la page ****/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ebb70f;
+    font-family: sans-serif;
+}
+
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main__content {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.game__container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+}
+
+.card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: transform 0.4s ease-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card img {
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+}
+
+.selected {
+    outline: 3px solid #0fbcf9;
+    outline-offset: -3px;
+    border-radius: 8px;
+}
+
+.selected img {
+    opacity: 1;
+}
+
+.matched {
+    outline: 3px solid #3bff34;
+}
+
+.play__again__btn {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.play__again__btn:hover {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
+    transform: scale(1.03);
+}
+
+footer span {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/**** Responsive design ****/
+
+@media(max-width: 1000px){
+    .game__container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 500px){
+    .game__container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
