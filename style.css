@@ -1,9 +1,13 @@
 /**** Reset ****/
 
-* {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+    outline: none;
 }
 
 /**** Style général de la page ****/
@@ -83,23 +87,52 @@ header h1 {
 }
 
 .play__again__btn {
+    display: block;
     margin-top: 40px;
     padding: 20px;
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    border-radius: 12px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 20px;
-    width: 100%;
+    max-width: 100%;
     cursor: pointer;
-    transition: all 0.4s ease-out;
+    background-color: transparent;
+    perspective: 2000px; /* La propriété perspective détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. */
 }
 
-.play__again__btn:hover {
+.play__again__btn span {
+    display: block;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
-    transform: scale(1.03);
+    position: relative;
+    background-color: #ffffff;
+    transform-style: preserve-3d; /* Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */
+    transform-origin: top;
+    border-radius: 12px;
+    transition: transform 0.4s ease-out;
+}
+
+.play__again__btn span::after {
+    content: "REJOUER";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: top;
+    background-color: #fde596; 
+    border-radius: 12px;
+    transform: rotateX(-90deg);
+}
+.play__again__btn:hover span {
+   transform: rotateX(90deg) translateY(-50%);
 }
 
 footer span {
