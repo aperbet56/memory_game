@@ -89,11 +89,6 @@ header h1 {
 .play__again__btn {
     display: block;
     margin-top: 40px;
-    padding: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 20px;
     width: 100%;
     cursor: pointer;
     background-color: transparent;
@@ -103,7 +98,9 @@ header h1 {
 .play__again__btn span {
     position: relative;
     display: block;
-    padding: 15px;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-size: 16px;
     font-weight: bold;
     color: #000000;
