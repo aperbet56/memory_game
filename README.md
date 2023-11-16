@@ -16,6 +16,7 @@ Lien vers le projet : https://aperbet56.github.io/memory_game/
 - Flexbox
 - Grid
 - Animation CSS
+- Animation 3D sur le bouton "Rejouer"
 - Page web responsive
 - Utilisation d'un normaliseur : le fichier normalize.css
 - JavaScript
