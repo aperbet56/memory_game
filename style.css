@@ -101,14 +101,14 @@ header h1 {
 }
 
 .play__again__btn span {
+    position: relative;
     display: block;
     padding: 15px;
     font-size: 16px;
     font-weight: bold;
     color: #000000;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
-    position: relative;
     background-color: #ffffff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
     transform-style: preserve-3d; /* Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */
     transform-origin: top;
     border-radius: 12px;
@@ -122,15 +122,16 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
     display: flex;
     justify-content: center;
     align-items: center;
     transform-origin: top;
     background-color: #fde596; 
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
     border-radius: 12px;
     transform: rotateX(-90deg);
 }
+
 .play__again__btn:hover span {
    transform: rotateX(90deg) translateY(-50%);
 }
@@ -143,13 +144,13 @@ footer span {
 
 /**** Responsive design ****/
 
-@media(max-width: 1000px){
+@media screen and (max-width: 1000px) {
     .game__container{
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media(max-width: 500px){
+@media screen and (max-width: 500px){
     .game__container{
         grid-template-columns: repeat(3, 1fr);
     }
