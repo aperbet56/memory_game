@@ -108,10 +108,10 @@ header h1 {
     font-weight: bold;
     color: #000000;
     background-color: #ffffff;
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 1) inset;
     transform-style: preserve-3d; /* Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel. */
     transform-origin: top;
-    border-radius: 12px;
+    border-radius: 6px;
     transition: transform 0.4s ease-out;
 }
 
@@ -127,8 +127,8 @@ header h1 {
     align-items: center;
     transform-origin: top;
     background-color: #fde596; 
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 1);
-    border-radius: 12px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 1) inset;
+    border-radius: 6px;
     transform: rotateX(-90deg);
 }
 
@@ -145,13 +145,13 @@ footer span {
 /**** Responsive design ****/
 
 @media screen and (max-width: 1000px) {
-    .game__container{
+    .game__container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media screen and (max-width: 500px){
-    .game__container{
+    .game__container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
